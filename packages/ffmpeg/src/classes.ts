@@ -189,13 +189,13 @@ export class FFmpeg {
     { signal }: FFMessageOptions = {}
   ): Promise<IsFirst> => {
     if (!this.#worker) {
-      this.#worker = classWorkerURL ?
-        new Worker(classWorkerURL) :
-        // We need to duplicated the code here to enable webpack
-        // to bundle worekr.js here.
-        new Worker(new URL("./worker.js", import.meta.url), {
-          type: "module",
-        });
+      this.#worker = classWorkerURL
+        ? new Worker(classWorkerURL)
+        : // We need to duplicated the code here to enable webpack
+          // to bundle worekr.js here.
+          new Worker(new URL("./worker.js", import.meta.url), {
+            type: "module",
+          });
       this.#registerHandlers();
     }
     return this.#send(
@@ -338,7 +338,11 @@ export class FFmpeg {
     ) as Promise<OK>;
   };
 
-  public mount = (fsType: FFFSType, options: FFFSMountOptions, mountPoint: FFFSPath, ): Promise<OK> => {
+  public mount = (
+    fsType: FFFSType,
+    options: FFFSMountOptions,
+    mountPoint: FFFSPath
+  ): Promise<OK> => {
     const trans: Transferable[] = [];
     return this.#send(
       {

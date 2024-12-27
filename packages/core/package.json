@@ -1,5 +1,5 @@
 {
-  "name": "@ffmpeg/core",
+  "name": "@ismaelcompsci/core",
   "version": "0.12.8",
   "description": "FFmpeg WebAssembly version (single thread)",
   "main": "./dist/umd/ffmpeg-core.js",
@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ffmpegwasm/ffmpeg.wasm.git"
+    "url": "git+https://github.com/ismaelcompsci/ffmpeg.wasm.git"
   },
   "keywords": [
     "ffmpeg",
@@ -30,12 +30,12 @@
   "author": "Jerome Wu <jeromewus@gmail.com>",
   "license": "GPL-2.0-or-later",
   "bugs": {
-    "url": "https://github.com/ffmpegwasm/ffmpeg.wasm/issues"
+    "url": "https://github.com/ismaelcompsci/ffmpeg.wasm/issues"
   },
   "engines": {
     "node": ">=16.x"
   },
-  "homepage": "https://github.com/ffmpegwasm/ffmpeg.wasm#readme",
+  "homepage": "https://github.com/ismaelcompsci/ffmpeg.wasm#readme",
   "publishConfig": {
     "access": "public"
   }
